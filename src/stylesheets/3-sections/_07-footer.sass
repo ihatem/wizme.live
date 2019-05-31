@@ -1,0 +1,68 @@
+footer
+  background: $blackDark
+  color: $whiteDark
+  padding: 4em 0
+  display: grid
+  grid-template-columns: 1fr 4fr 4fr 4fr 4fr 1fr
+  grid-gap: 8em
+  @include screen(med)
+    grid-template-columns: 1fr
+    grid-gap: 0
+    text-align: center
+  @include screen(1560)
+    grid-gap: 1em
+
+
+  .foot-contact, .foot-social, .foot-news, .foot-copyright
+    @include screen(med)
+      margin-bottom: 2em
+      padding: 0 1.5em
+    h2
+      font-weight: 600
+    p
+      font-weight: 300
+      color: $grayLight
+      a
+        &:hover
+          color: $whiteDark
+      span
+        font-weight: 400
+        color: $whiteDark
+
+  .foot-contact
+    grid-column: 2/2
+    @include screen(med)
+      grid-column: 1/7
+  .foot-social
+    @include screen(med)
+      grid-column: 1/7
+      grid-row-start: 2
+    .foot-icons-wrap
+      display: flex
+      @include screen(med)
+        justify-content: center
+
+  .foot-news
+    @include screen(med)
+      grid-column: 1/7
+      grid-row-start: 3
+    .foot-news-form-wrap
+      display: flex
+      @include screen(med)
+        justify-content: center
+      input
+        color: $whiteLight
+        box-sizing: border-box
+        border: 0
+        padding: 1em .5em
+        height: 2.2em
+        background: $grayDark
+        margin-right: .8em
+        &::placeholder
+          color: $grayLight
+          font-size: .9em
+
+  .foot-copyright
+    @include screen(med)
+      grid-column: 1/7
+      grid-row-start: 4

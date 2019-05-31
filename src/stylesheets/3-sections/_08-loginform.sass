@@ -1,0 +1,200 @@
+#login-form
+  position: absolute
+  background: rgba(mix(white,$greenLight, 80%), .4)
+  width: 100vw
+  height: 100vh
+  top: 0
+  left: 0
+  display: none
+  padding: 0
+  align-items: center
+  justify-content: center
+  flex-direction: row
+  z-index: 999
+
+  .login-form-wrap
+    display: flex
+    justify-content: center
+    overflow: hidden
+    position: relative
+    @include screen(med)
+      width: 85%
+    @include screen(x-small)
+      width: 100%
+      height: 100vh
+
+    .close-login-wrap
+      margin: 2em 0
+      display: none
+      @include screen (small)
+        display: flex
+        justify-content: center
+      .signup-item
+        color: $whiteLight !important
+        &:hover
+          color: $grayLight !important
+      .close-login-txt
+        text-align: center
+        color: $grayLight
+        transition: .3s color ease-in-out
+        &:hover
+          color: $grayDark
+
+
+
+    .login-bg, .signup-bg
+      position: absolute
+      width: 1px
+      height: 1px
+      top: 22em
+      right: calc(.5em + (50%/2))
+      border-radius: 100%
+      transform-origin: center
+      transform: scale(0)
+      z-index: 10
+      background: $purpleLight
+    .login-bg
+      top: 32em
+      background: $whiteLight
+
+    .login-wrap
+      width: 30em
+      box-sizing: border-box
+      background: $whiteLight
+      padding: 2em 0
+      @include screen(x-small)
+        padding: 1em 0
+
+
+      .login-head
+        display: inline-block
+        color: $whiteLight
+        text-transform: uppercase
+        font-weight: 400
+        background: $greenLight
+        padding: 1em 1.5em
+        margin-bottom: 2.5em
+
+      .login-content
+        display: flex
+        flex-direction: column
+        padding: 0 1.5em
+        box-sizing: border-box
+        .login-btn-wrap
+          display: flex
+
+        input
+          padding: 1em
+          background: mix(black,$whiteDark, 3%)
+          border: 0
+          margin-bottom: 1em
+          box-sizing: border-box
+          border: 2px solid transparent
+          transition: border .3s ease-in-out
+          &:focus
+            border: 2px solid $grayLight
+
+        .login-form-input
+          color: $blackLight
+          font-weight: 500
+          &::placeholder
+            font-weight: 400
+            color: $grayLight
+
+        .login-pwd
+          text-transform: uppercase
+          text-align: center
+          font-size: .8em
+          color: $grayDark
+          margin: 0
+          margin-top: 2.5em
+          a
+            color: $purpleLight
+            &:hover
+              color: $purpleDark
+
+        hr
+          border: 0
+          width: 90%
+          height: .1em
+          background: $grayLight
+          margin: 3em auto
+
+        .login-form-social
+          display: flex
+          justify-content: space-around
+          padding: 0 1.5em
+          .login-icon
+            width: 2em
+            height: 2em
+            cursor: pointer
+            //background: mix(black,$whiteDark, 7%)
+            &:hover path
+              fill: $greenLight
+            &:hover polygon
+              fill: $greenLight
+            svg
+              width: 100%
+              height: 100%
+              path, polygon
+                transition: fill .3s ease-in-out
+
+
+
+
+    .signup-wrap
+      width: 30em
+      background: $purpleLight
+      padding: 2em 1.5em
+      box-sizing: border-box
+      //@include screen(small)
+        display: none
+      .signup-btn-wrap
+        display: flex
+
+      .signup-head
+        color: $whiteLight
+        text-transform: uppercase
+        font-weight: 400
+      .signup-content
+        display: flex
+        flex-direction: column
+        box-sizing: border-box
+        margin: 3em 0
+        input
+          padding: 1em
+          background: $whiteLight
+          border: 0
+          margin-bottom: 1em
+          color: $blackLight
+          font-weight: 500
+          border: 2px solid transparent
+          transition: border .3s ease-in-out
+          &:focus
+            border: 2px solid $greenLight
+          &::placeholder
+            font-weight: 400
+            color: $grayLight
+        button
+          margin-top: 3em
+
+
+.body-login-form-enabled
+  overflow: hidden !important
+
+.blur-it
+  filter: blur(.5em)
+
+.signup-item
+  opacity: 0
+
+.flexOn
+  display: flex !important
+
+.displayOn
+  display: block
+
+.displayOff
+  display: block
+  @include screen(small)
+    display: none

@@ -1,0 +1,11 @@
+<svg viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-229.000000, -659.000000)">
+            <g id="Group-7" transform="translate(229.000000, 659.000000)">
+                <path d="M12,64 C5.4,64 0,58.6 0,52 L0,12 C0,5.4 5.4,0 12,0 L52,0 C58.6,0 64,5.4 64,12 L64,52 C64,58.6 58.6,64 52,64 L12,64 Z" id="Fill-1" fill="#FF6B9F"></path>
+                <polygon id="Fill-3" fill="#F2F3F7" points="20.3428 42.5482 12.3238 11.8892 19.1968 11.8892 23.7118 33.3392 23.9588 33.3392 29.2598 11.8892 34.7848 11.8892 40.0638 33.3392 40.3328 33.3392 44.8248 11.8892 51.6758 11.8892 43.6568 42.5482 37.6598 42.5482 32.1348 21.8612 31.9098 21.8612 26.3628 42.5482"></polygon>
+                <polygon id="Fill-5" fill="#00FDF8" points="12.34 52.111 51.34 52.111 51.34 48.111 12.34 48.111"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

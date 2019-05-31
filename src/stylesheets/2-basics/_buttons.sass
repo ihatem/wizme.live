@@ -1,0 +1,266 @@
+.head-cnct-btn, .news-btn
+  background: $purpleLight
+  padding: .8em
+  border-radius: .4em
+  transition: .3s all ease-in-out
+  &:hover
+    color: $whiteLight !important
+    background: $purpleDark
+    &::before
+      display: none
+
+
+.sugg-btn
+  text-transform: uppercase
+  border: 0
+  padding: .8em
+  color: $whiteLight
+  background: $blackDark
+  transition: .3s all ease-in-out
+  margin-right: .8em
+  cursor: pointer
+  &:last-child
+    margin-right: 0
+  &:hover
+    background: $blackLight
+  @include screen(small)
+    margin-right: 1em
+    margin-bottom: 1em
+    &:last-child
+      margin-right: 0
+
+.ccm-cta-btn
+  display: inline-block
+  text-transform: uppercase
+  font-weight: 500
+  color: $whiteLight
+  background: $purpleLight
+  padding: .8em 1.5em
+  transition: .3s all ease-in-out
+  &:hover
+    background: $purpleDark
+
+.presta-price-btn
+  font-weight: 500
+  padding: .3em .6em
+  color: $whiteLight
+  margin-left: auto
+  @include linear-gradient($gradientGreenDark, $gradientGreenLight)
+
+.presta-box-dots
+  list-style: none
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 4em 0
+  padding: 0
+
+  li
+    width: .7em
+    height: .7em
+    margin-right: .5em
+    button
+      width: 100%
+      height: 100%
+      border: 0
+      margin: 0
+      padding: 0
+      border-radius: 100%
+      opacity: .5
+      text-indent: -9999px
+      background: $greenLight
+
+
+  .slick-active
+    button
+      opacity: 1
+      background: $greenLight
+
+.blog-more-btn
+  font-weight: 400
+  text-transform: uppercase
+  padding: .4em .8em
+  color: $whiteLight
+  margin-left: auto
+  @include linear-gradient($gradientGreenDark, $gradientGreenLight)
+
+.blog-tag
+  background: $whiteLight
+  padding: .4em .8em
+  cursor: pointer
+  margin-right: 1em
+  height: 1.3em
+  margin-bottom: 1em
+  &:hover
+    background: $whiteDark
+
+.purple-tag
+  border-left: .3em solid $purpleLight
+
+.black-tag
+  border-left: .3em solid $blackLight
+
+.blog-tag-more
+  display: flex
+  align-items: center
+  justify-content: center
+  .more-dot
+    height: .3em
+    width: .3em
+    border-radius: 100%
+    background: $grayDark
+    margin-right: .2em
+    &:last-child
+      margin-right: 0
+
+.news-btn
+  color: white
+  border-radius: 0
+  text-align: center
+  @include screen(small)
+    width: auto
+
+
+.foot-news-btn
+  height: 2.2em
+  width: 2.2em
+  background: $whiteDark
+  display: flex
+  justify-content: center
+  align-items: center
+  transition: background .3s ease-in-out
+  svg
+    width: 70%
+    height: 70%
+    .foot-news-btn-svg
+      transition: fill .3s ease-in-out
+  &:hover
+    background: $greenLight
+  &:hover .foot-news-btn-svg
+    fill: $whiteDark
+
+.foot-icon
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 2.5em
+  height: 2.5em
+  background: $whiteLight
+  border-radius: 100%
+  margin-right: .5em
+  transition: background .3s ease-in-out
+  svg
+    path, rect, circle
+      transition: fill .3s ease-in-out
+  &:hover
+    background: $greenLight
+  &:hover path
+    fill: $whiteDark
+  &:hover rect
+    fill: $whiteDark
+  &:hover circle
+    fill: $whiteDark
+  svg
+    width: 50%
+    height: 50%
+
+.login-btn
+  padding: 1em 0
+  border: 0
+  background: $purpleLight
+  color: $whiteLight
+  text-transform: uppercase
+  transition: all .3s ease-in-out
+  width: 100%
+  @include screen(small)
+    margin-right: 1em
+    width: calc(50% - .5em)
+  &:hover
+    background: mix(white,$purpleLight, 10%)
+  &:focus
+    background: mix(white,$purpleLight, 10%) !important
+
+
+
+.login-btn-disabled, .signup-btn-disabled
+  color: $grayLight
+  border: .2em solid $grayLight
+  background: inherit
+  margin-right: 0
+  width: 0%
+  z-index: 11
+  display: none
+  @include screen(small)
+    display: block
+    width: calc(50% - .5em)
+  &:hover
+    color: $whiteLight
+    background: $greenLight
+    border: .2em solid $greenLight
+
+.login-btn-disabled
+  color: $whiteLight
+  border: .2em solid $whiteLight
+  &:hover
+    color: $blackLight
+    background: $whiteLight
+    border: .2em solid $whiteLight
+
+.register-btn
+  background: $greenLight
+  &:hover
+    background: mix(white,$greenLight, 10%)
+  &:focus
+    background: mix(white,$greenLight, 10%) !important
+
+.close-btn-wrap
+  position: absolute
+  top: 0
+  right: 0
+  padding: 3em 3em 0 0
+  z-index: 9
+  @include screen(small)
+    display: none
+
+  .close-btn
+    $size: 50px
+    height: $size
+    width: $size
+    position: relative
+    box-sizing: border-box
+    line-height: $size
+    display: inline-block
+    opacity: .5
+    transition: opacity .3s ease-in-out
+
+    &:hover
+      opacity: 1
+
+    &:before,
+    &:after
+      $width: 50px
+      $height: .3em
+      transform: rotate(-45deg)
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      margin-top: -$height/2
+      margin-left: -$width/2
+      display: block
+      height: $height
+      width: $width
+      background-color: $whiteLight
+      transition: all 0.3s ease-out
+
+    &:after
+      transform: rotate(-135deg)
+
+
+    &:hover
+      &:before, &:after
+        transform: rotate(0deg)
+//.slick-prev
+  display: none !important
+//.slick-next
+  display: none !important

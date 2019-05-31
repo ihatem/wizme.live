@@ -1,0 +1,87 @@
+#blog
+  background: #80cbd2
+  background: linear-gradient(to bottom, #80cbd2 -30%,#ffffff 30%)
+  @include screen(small)
+    display: block
+  @include screen(med)
+    display: block
+  .blog-wrap
+    grid-column-start: 2
+    grid-column-end: 4
+    grid-row-start: 2
+    width: 100%
+    margin-top: 4em
+
+    .slick-active
+      transition: all .3s ease-in-out
+      opacity: 1 !important
+      transform: scale(1) !important
+
+    .blog-box
+      background: lighten($greenLight, 45%)
+      box-sizing: border-box
+      margin: 1em
+      opacity: .3
+      transform: scale(.9)
+      margin: .5em
+
+      .blog-img
+        background: url('../images/jpg/portrait1.jpg')
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
+        height: 15em
+        position: relative
+        .blog-date
+          position: absolute
+          color: $whiteLight
+          text-align: center
+          background: $purpleDark
+          padding: .8em
+          border-radius: 100%
+          right: 1.5em
+          top: 1.5em
+        .blog-theme
+          position: absolute
+          color: $whiteLight
+          text-align: center
+          background: $purpleDark
+          padding: .5em 1em
+          left: 0
+          bottom: 1.5em
+
+      .blog-txt
+        padding: 2em 1.5em
+        .blog-txt-title
+          margin: 0
+          color: $greenLight
+        p
+          color: $grayDark
+          font-size: .9em
+
+        .blog-auth
+          display: flex
+          align-items: center
+          margin: 1.5em 0
+          .blog-avatar
+            margin-right: 1em
+            width: 3em
+            height: 3em
+            background: url('../images/jpg/portrait1.jpg')
+            background-position: center
+            background-repeat: no-repeat
+            background-size: cover
+            border-radius: 100%
+          .blog-name
+            h4, h5
+              margin: 0
+              color: $blackLight
+              font-weight: 500
+            h5
+              font-weight: 400
+
+          .blog-more-btn
+            margin-left: auto
+        .blog-tags-wrap
+          display: flex
+          flex-wrap: wrap

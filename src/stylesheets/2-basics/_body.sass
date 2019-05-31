@@ -1,0 +1,36 @@
+body
+  font-family: "Graphik"
+  //position: relative
+.section-head
+  grid-column-start: 2
+  grid-column-end: 4
+  text-align: center
+  padding-bottom: 4em
+  @include screen(small)
+    padding: 0 10%
+    margin-bottom: 5em
+  .news-hr
+    background: $grayLight
+  hr
+    width: 3em
+    height: .3em
+    border: 0
+    background: $purpleLight
+  .section-title
+    margin: .1em 0
+    text-transform: uppercase
+    color: $greenLight
+    font-weight: 500
+  .section-subtitle
+    font-weight: 300
+    margin: 0
+    color: $grayDark
+  .dark-head-sub
+    color: $whiteDark
+  .dark-head-title
+    color: $blackLight
+
+section
+  padding: 8em 0
+  display: grid
+  grid-template-columns: 1fr 4fr 4fr 1fr

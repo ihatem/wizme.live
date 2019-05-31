@@ -1,0 +1,64 @@
+#newsletter
+  @include linear-gradient($gradientGreenDark, $gradientGreenLight)
+  position: relative
+  overflow: hidden
+  .pplane-left
+    position: absolute
+    top: -10em
+    left: -10em
+    width: 25em
+    height: 25em
+    background: url('../images/svg/pplane.svg')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    @include screen(small)
+      width: 19em
+      height: 19em
+    @include screen(med)
+      top: -13em
+      left: -13em
+
+
+  .pplane-right
+    position: absolute
+    bottom: -8em
+    right: -10em
+    width: 18em
+    height: 18em
+    background: url('../images/svg/pplane.svg')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    transform: rotate(-120deg) scale(1, -1)
+    @include screen(small)
+      width: 15em
+      height: 15em
+
+
+
+
+  .newsform-wrap
+    grid-column-start: 2
+    grid-column-end: 4
+    display: flex
+    justify-content: center
+    @include screen(small)
+      flex-direction: column
+      align-items: center
+      
+    .input-news
+      width: 60%
+      margin-right: .5em
+      border: 0
+      box-sizing: border-box
+      background: $whiteLight
+      //border: .1em solid $whiteLight
+      padding: .8em 1em
+      transition: border .3s ease-in-out
+      @include screen(small)
+        width: 100%
+        margin: 0
+        margin-bottom: 1em
+      //&:focus
+        border: .1em solid $grayDark

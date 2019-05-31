@@ -1,0 +1,129 @@
+#temoig
+  overflow: hidden
+  @include screen(med)
+    display: block
+
+
+  .testimon-wrap-mobile
+    display: none !important
+    @include screen(med)
+      display: block !important
+
+  .testimon-wrap
+    @include screen(med)
+      display: none !important
+
+  .testimon-wrap-mobile
+    .slick-list
+      overflow: visible
+      .slick-track
+        overflow: visible !important
+    .slick-active
+      transition: all .3s ease-in-out
+      opacity: 1 !important
+      transform: scale(1) !important
+    .testimon-box
+      opacity: .3
+      transform: scale(.8)
+      margin: 2em
+      overflow: visible
+      @include screen (small)
+        margin: 1.5  em
+      .testimon-info
+        color: $grayLight
+        justify-content: space-between
+        span
+          @include screen(x-small)
+            width: 3.5em
+        .testimon-info-name
+          color: $greenLight
+          font-weight: 500
+        .testimon-info-dot
+          margin: 0 1em
+          text-align: center
+          @include screen(x-small)
+            width: 1em
+
+
+  .testimon-wrap, .testimon-wrap-mobile
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-column-start: 2
+    grid-column-end: 4
+    grid-gap: 10em
+    margin-bottom: 3em
+    @include screen (large)
+      grid-template-columns: 1fr 1fr
+
+
+
+
+
+
+    .testimon-box
+      position: relative
+      background: lighten($greenLight, 40%)
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: 2.5em
+      border-radius: 1em
+
+      .testimon-text
+        color: $grayDark
+        font-weight: 400
+        font-style: italic
+        font-size: 1.4em
+        transition: .3s font-size ease-in-out
+        @include screen(x-large)
+          font-size: 1em
+      .testimon-avatar
+        background: url('../images/jpg/portrait1.jpg')
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+        width: 6em
+        height: 6em
+        position: absolute
+        bottom: -3em
+        left: -3em
+        border-radius: 100%
+        box-sizing: border-box
+        border: .2em solid white
+
+      .testimon-quote-up-icon
+        background: url('../images/svg/testimon-up.svg')
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+        width: 3em
+        height: 3em
+        position: absolute
+        top: -1.5em
+        left: -1.5em
+
+      .testimon-quote-down-icon
+        background: url('../images/svg/testimon-down.svg')
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+        width: 3em
+        height: 3em
+        position: absolute
+        bottom: -1.5em
+        right: -1.5em
+
+      .testimon-info
+        display: flex
+        align-items: center
+        color: white
+        position: absolute
+        bottom: -3em
+        left: 4em
+        height: 3em
+        color: $greenLight
+        font-weight: 500
+        span
+          color: $grayLight
+          font-weight: 300
+          font-size: .9em

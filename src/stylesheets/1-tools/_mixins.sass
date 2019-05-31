@@ -1,0 +1,152 @@
+// LINEAR GRADIENT
+@mixin linear-gradient($from, $to)
+  background: $to
+  background: -moz-linear-gradient(90deg, $from 0%, $to 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$from), color-stop(100%,$to))
+  background: -webkit-linear-gradient(left, $from 0%,$to 100%)
+  background: -o-linear-gradient(left, $from 0%,$to 100%)
+  background: linear-gradient(90deg, $from 0%,$to 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$from}, endColorstr=#{$to})
+
+// IMPORT FONTS
+=fontface($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg)
+  $src: null
+  $extmods: (eot: "?", svg: "#" + str-replace($name, " ", "_"))
+
+  $formats: (otf: "opentype", ttf: "truetype")
+
+  @each $ext in $exts
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext)
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext)
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma)
+
+  @font-face
+    font-family: quote($name)
+    font-style: $style
+    font-weight: $weight
+    src: $src
+
+
+=rotate-text($delay, $duration, $animation, $itcount)
+  -webkit-animation: $animation $duration
+  -moz-animation: $animation $duration
+  -ms-animation: $animation $duration
+  -o-animation: $animation $duration
+  animation: $animation $duration
+  //animation-iteration-count
+  -webkit-animation-iteration-count: $itcount
+  -moz-animation-iteration-count: $itcount
+  -ms-animation-iteration-count: $itcount
+  -o-animation-iteration-count: $itcount
+  animation-iteration-count: $itcount
+  //animation-delay
+  -webkit-animation-delay: $delay
+  -moz-animation-delay: $delay
+  -ms-animation-delay: $delay
+  -o-animation-delay: $delay
+  animation-delay: $delay
+
+@keyframes move
+  0%
+    top: 0em
+
+  33%
+    top: -1.1em
+
+  66%
+    top: -2.3em
+
+
+//@-webkit-keyframes move
+  0%
+    top: 0em
+
+  20%
+    top: -1.3em
+
+  40%
+    top: -2.6em
+
+  60%
+    top: -3.9em
+
+  80%
+    top: -5.2em
+
+
+//@-moz-keyframes move
+  0%
+    top: 0em
+
+  20%
+    top: -1.3em
+
+  40%
+    top: -2.6em
+
+  60%
+    top: -3.9em
+
+  80%
+    top: -5.2em
+
+
+//@-o-keyframes move
+  0%
+    top: 0em
+
+  20%
+    top: -1.3em
+
+  40%
+    top: -2.6em
+
+  60%
+    top: -3.9em
+
+  80%
+    top: -5.2em
+
+
+//@keyframes move
+  0%
+    top: 0em
+
+  20%
+    top: -1.3em
+
+  40%
+    top: -2.6em
+
+  60%
+    top: -3.9em
+
+  80%
+    top: -5.2em
+
+
+// Responsive Media Queries
+$breakpoint-x-small: 380px
+$breakpoint-small: 600px
+$breakpoint-med-small: 960px
+$breakpoint-med: 1175px
+$breakpoint-large: 1690px
+
+=screen($size, $type: max, $pixels: $breakpoint-small)
+  @if $size == "x-small"
+    @media screen and ($type + -width: $breakpoint-x-small)
+      @content
+  @else if $size == "small"
+    @media screen and ($type + -width: $breakpoint-small)
+      @content
+  @else if $size == "med"
+    @media screen and ($type + -width: $breakpoint-med-small)
+      @content
+  @else if $size == "large"
+    @media screen and ($type + -width: $breakpoint-med)
+      @content
+  @else if $size == "x-large"
+    @media screen and ($type + -width: $breakpoint-large)
+      @content
+  @else
+    @content

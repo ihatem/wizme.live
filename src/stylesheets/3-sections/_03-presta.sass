@@ -1,0 +1,100 @@
+#presta
+  background: $blackDark
+  @include screen(small)
+    display: block
+
+  .presta-wrap
+    grid-column-start: 2
+    grid-column-end: 4
+    grid-row-start: 2
+    width: 100%
+    margin-top: 4em
+
+    .slick-active
+      transition: all .3s ease-in-out
+      opacity: 1 !important
+      transform: scale(1) !important
+
+    .presta-box
+      position: relative
+      //margin-right: 1em
+      box-sizing: border-box
+      margin: 1em
+      @include screen(small)
+        opacity: .3
+        transform: scale(.9)
+        margin: .5em
+      .presta-avatar
+        position: relative
+        margin: 0 auto
+        width: 8em
+        height: 8em
+        border-radius: 100%
+        background: url('../images/jpg/portrait1.jpg')
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+        z-index: 1
+      .presta-box-infos
+        background: $whiteDark
+        padding: 1em
+        margin-top: -4em
+        border-radius: .7em
+        z-index: 0
+        .presta-text
+          grid-column: span 2
+          text-align: center
+          margin-top: 5em
+          margin-bottom: 1em
+          h4, h5, h3, p
+            margin: 0
+          .presta-box-name
+            color: $blackDark
+            font-size: 1.3em
+            font-weight: 500
+          .presta-box-job
+            color: $grayDark
+            font-size: 1.1em
+            font-weight: 300
+          .presta-box-title
+            color: $purpleLight
+            text-transform: uppercase
+            margin: 1em 0 .5em 0
+            font-weight: 500
+          .presta-box-desc
+            color: $grayLight
+            font-weight: 300
+        .presta-details
+          display: flex
+          align-items: center
+          hr
+            width: .1em
+            height: .9em
+            border: 0
+            background: $grayLight
+            margin: 0 .5em
+          .leaf-icon
+            width: 1em
+            height: 1em
+            background: url('../images/svg/leaf-icon.svg')
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+          .scope-icon
+            width: 1em
+            height: 1em
+            background: url('../images/svg/scope-icon.svg')
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+          .mark-icon
+            width: 1em
+            height: 1em
+            background: url('../images/svg/mark-icon.svg')
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            margin-right: .5em
+          span
+            color: $grayDark
+            font-weight: 300
