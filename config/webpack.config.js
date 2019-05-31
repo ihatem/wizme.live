@@ -27,7 +27,6 @@ module.exports = {
     open: true,
     port: config.port,
     host: config.dev_host,
-    disableHostCheck: true
   },
   module: {
     rules: loaders,
