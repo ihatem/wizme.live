@@ -64,7 +64,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-loader": "^3.0.0",
     "postcss-sass": "^0.3.5",
-    "robotstxt-webpack-plugin": "^4.0.1",
+    "robotstxt-webpack-plugin": "^6.0.0",
     "sass-loader": "^7.1.0",
     "sitemap-webpack-plugin": "^0.6.0",
     "style-loader": "^0.23.1",
